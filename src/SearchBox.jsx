@@ -8,7 +8,7 @@ const SearchBox = (props) => {
   let [city, setCity] = useState("");
 
   const API_URL = "https://api.openweathermap.org/data/2.5/weather";
-  const API_KEY = "a1eb0b95e055114f18e4d6dcead894c3";
+  const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
   let getWeather = async (city) => {
     const response = await fetch(
