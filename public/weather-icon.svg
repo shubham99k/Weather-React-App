@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SkyCast icon">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5a3" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd166" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#sky)" />
+  <circle cx="22" cy="24" r="10" fill="url(#sun)" />
+  <g fill="#ecfeff">
+    <ellipse cx="38" cy="34" rx="13" ry="8" />
+    <ellipse cx="29" cy="36" rx="9" ry="6" />
+    <ellipse cx="46" cy="37" rx="8" ry="5" />
+  </g>
+  <g stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.95">
+    <path d="M25 47 L25 53" />
+    <path d="M34 47 L34 55" />
+    <path d="M43 47 L43 53" />
+  </g>
+</svg>

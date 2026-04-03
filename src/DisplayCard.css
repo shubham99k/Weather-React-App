@@ -1,6 +1,7 @@
 .dc {
   display: flex;
   justify-content: center;
+  width: 100%;
   animation: fadeInUp 0.6s ease-out;
 }
 
@@ -25,8 +26,24 @@
 }
 
 .dc-placeholder .weather-icon {
-  font-size: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #bae6fd;
   animation: float 3s ease-in-out infinite;
+}
+
+.spin-icon {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes float {
@@ -40,15 +57,16 @@
 }
 
 .weather-card {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(15, 23, 42, 0.58) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(148, 163, 184, 0.24) !important;
   border-radius: 24px !important;
   overflow: hidden !important;
-  width: 380px !important;
+  width: 100% !important;
+  max-width: 560px !important;
   max-width: 100% !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 14px 40px rgba(2, 8, 20, 0.35) !important;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease !important;
@@ -56,12 +74,12 @@
 
 .weather-card:hover {
   transform: translateY(-4px) !important;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45) !important;
+  box-shadow: 0 18px 50px rgba(2, 8, 20, 0.48) !important;
 }
 
 .weather-card-header {
-  background: linear-gradient(135deg, #667eea, #764ba2) !important;
-  height: 160px !important;
+  background: linear-gradient(135deg, #0369a1, #0891b2, #14b8a6) !important;
+  height: 140px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -92,14 +110,17 @@
 }
 
 .weather-emoji {
-  font-size: 4.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
+  color: #f0f9ff;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
   animation: float 3s ease-in-out infinite;
 }
 
 .weather-card .MuiCardContent-root {
-  padding: 1.8rem !important;
+  padding: 1.5rem !important;
 }
 
 .city-name {
@@ -107,36 +128,46 @@
   font-family: "Poppins", sans-serif !important;
   font-weight: 600 !important;
   font-size: 1.5rem !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 0.9rem !important;
+}
+
+.observation-time {
+  color: rgba(226, 232, 240, 0.66) !important;
+  font-size: 0.78rem !important;
+  margin-bottom: 0.95rem !important;
+  letter-spacing: 0.3px;
 }
 
 .weather-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 0.8rem;
   margin-top: 0.5rem;
 }
 
 .weather-detail-item {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(15, 23, 42, 0.5);
   border-radius: 14px;
-  padding: 0.9rem;
+  padding: 0.8rem;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.22);
   transition: background 0.3s ease;
 }
 
 .weather-detail-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(30, 41, 59, 0.6);
 }
 
 .detail-icon {
-  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #7dd3fc;
   margin-bottom: 0.2rem;
 }
 
 .detail-label {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(226, 232, 240, 0.52) !important;
   font-family: "Poppins", sans-serif !important;
   font-size: 0.7rem !important;
   text-transform: uppercase;
@@ -147,5 +178,11 @@
   color: #fff !important;
   font-family: "Poppins", sans-serif !important;
   font-weight: 600 !important;
-  font-size: 1.05rem !important;
+  font-size: 0.98rem !important;
+}
+
+@media (max-width: 520px) {
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
 }

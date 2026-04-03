@@ -10,7 +10,7 @@
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #fff;
+  color: #f8fafc;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +21,18 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(34, 211, 238, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(251, 191, 36, 0.14),
+      transparent 30%
+    ),
+    linear-gradient(140deg, #082f49, #0f172a, #111827);
   background-attachment: fixed;
 }
 
@@ -29,6 +40,6 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: 2rem 1rem;
+  align-items: center;
+  padding: 1.5rem 1rem 2.5rem;
 }

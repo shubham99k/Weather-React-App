@@ -1,95 +1,101 @@
-# Weather React App
+# SkyCast Weather Studio
 
-A simple and clean weather application built with **React** and **Vite**. Search for any city and get real-time weather data including temperature, humidity, and weather conditions.
+A modern weather dashboard built with React and Vite. Search any city and view a richer weather snapshot with planning insights, detailed metrics, and a polished responsive UI.
 
 ## Features
 
-- Search weather by city name
-- Displays temperature, feels like, humidity, and weather description
-- Clean UI built with Material UI (MUI)
-- Powered by [OpenWeatherMap API](https://openweathermap.org/api)
+- City weather search using OpenWeather API
+- Quick city shortcuts for faster lookup
+- Loading state and API error handling
+- Detailed weather metrics:
+  - Temperature and feels-like
+  - Humidity, wind speed, pressure
+  - Visibility, min/max temperature
+  - Sunrise and sunset (local city time)
+- Insight panel with comfort and commute guidance
+- Lucide React weather icons (no emoji UI)
+- Minimal footer with attribution and profile links
 
 ## Tech Stack
 
-- **React 19** — UI library
-- **Vite** — Build tool & dev server
-- **Material UI (MUI)** — Component library
-- **OpenWeatherMap API** — Weather data
+- React 19
+- Vite 7
+- Material UI (MUI)
+- Lucide React
+- OpenWeather API
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or later)
-- An [OpenWeatherMap](https://openweathermap.org/api) API key (free tier works)
+- Node.js 18+
+- OpenWeather API key
 
 ### Installation
 
-1. **Clone the repository**
+1. Clone the repository
 
-   ```bash
-   git clone https://github.com/shubham99k/Weather-React-App.git
-   cd Weather-React-App
-   ```
+```bash
+git clone https://github.com/shubham99k/Weather-React-App.git
+cd Weather-React-App
+```
 
-2. **Install dependencies**
+2. Install dependencies
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-3. **Set up environment variables**
+3. Create a `.env` file in the project root
 
-   Create a `.env` file in the root directory:
+```env
+VITE_OPENWEATHER_API_KEY=your_api_key_here
+```
 
-   ```
-   VITE_OPENWEATHER_API_KEY=your_api_key_here
-   ```
+4. Run the development server
 
-   Replace `your_api_key_here` with your actual OpenWeatherMap API key.
+```bash
+npm run dev
+```
 
-4. **Start the development server**
+App runs at `http://localhost:5173`.
 
-   ```bash
-   npm run dev
-   ```
-
-   The app will be available at `http://localhost:5173`.
-
-### Build for Production
+## Build
 
 ```bash
 npm run build
 ```
 
-The output will be in the `dist/` folder.
+Production files are generated in `dist/`.
 
 ## Project Structure
 
-```
+```text
 Weather-React-App/
 ├── public/
+│   └── weather-icon.svg
 ├── src/
-│   ├── App.jsx          # Root component
-│   ├── WeatherApp.jsx   # Main weather app layout
-│   ├── SearchBox.jsx    # City search input & API call
-│   ├── DisplayCard.jsx  # Weather data display card
-│   ├── main.jsx         # App entry point
-│   └── *.css            # Component styles
-├── .env                 # Environment variables (not tracked)
+│   ├── App.jsx
+│   ├── WeatherApp.jsx
+│   ├── WeatherApp.css
+│   ├── SearchBox.jsx
+│   ├── SearchBox.css
+│   ├── DisplayCard.jsx
+│   ├── DisplayCard.css
+│   ├── index.css
+│   └── main.jsx
 ├── index.html
 ├── package.json
 └── vite.config.js
 ```
 
-## Environment Variables
+## Environment Variable
 
-| Variable                   | Description                 |
-| -------------------------- | --------------------------- |
-| `VITE_OPENWEATHER_API_KEY` | Your OpenWeatherMap API key |
+| Variable                   | Description         |
+| -------------------------- | ------------------- |
+| `VITE_OPENWEATHER_API_KEY` | OpenWeather API key |
 
-> **Note:** Never commit your `.env` file. It is already listed in `.gitignore`.
+## Links
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+- GitHub: https://github.com/shubham99k/Weather-React-App.git
+- Portfolio: https://portfolio-azure-eta-61.vercel.app/
